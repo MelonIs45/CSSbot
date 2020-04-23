@@ -10,6 +10,7 @@ config = json.loads(open(jsonPath, "r").read())
 rgb_scale = 255
 cmyk_scale = 100
 
+
 class Utils(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -26,7 +27,8 @@ class Utils(commands.Cog):
         embed.set_author(name = member)
         embed.set_footer(text = f"Requested by {ctx.author}", icon_url = ctx.author.avatar_url_as(format='png'))
         embed.timestamp = datetime.datetime.utcnow()
-        
+
+
 def setup(client):
     client.add_cog(Utils(client))
     

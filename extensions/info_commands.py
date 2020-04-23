@@ -8,6 +8,7 @@ cwd = os.path.dirname(__file__)
 jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")
 config = json.loads(open(jsonPath, "r").read())
 
+
 class Info_commands(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -67,6 +68,7 @@ class Info_commands(commands.Cog):
         embed.description = 'Pong! {0}ms'.format(round((client.latency)*1000, 1))
 
         await ctx.send(embed = embed)  
+
 
 def setup(client):
     client.add_cog(Info_commands(client))

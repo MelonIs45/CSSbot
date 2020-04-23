@@ -9,6 +9,7 @@ cwd = os.path.dirname(__file__)
 jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config.json')
 config = json.loads(open(jsonPath, "r").read())
 
+
 class Events(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -76,6 +77,7 @@ class Events(commands.Cog):
             embed.set_footer(text = f"Sent by {member}", icon_url = member.avatar_url_as(format='png'))
 
             await masterChannelId.send(embed = embed)
+
 
 def setup(client):
     client.add_cog(Events(client))
