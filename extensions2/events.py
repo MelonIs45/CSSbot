@@ -7,7 +7,7 @@ from discord.ext import commands, tasks
 
 
 cwd = os.path.dirname(__file__)
-jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config.json')
+jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config2.json')
 config = json.loads(open(jsonPath, "r").read())
 
 
@@ -40,7 +40,7 @@ class Events(commands.Cog):
                 attUrl = ""
                 logText = message.content
 
-            log = open("log.txt", "a")
+            log = open("log2.txt", "a")
             logName = message.author.display_name
             currentDT = datetime.datetime.now()
             logTime = currentDT.strftime("%Y-%m-%d %H:%M:%S")

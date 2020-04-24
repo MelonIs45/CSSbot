@@ -1,0 +1,135 @@
+2020-04-23 20:06:07 | Ryan | test
+2020-04-23 20:33:43 | Ryan | test
+2020-04-23 20:34:16 | Ryan | test
+2020-04-23 20:35:17 | Ryan | test
+2020-04-23 20:36:02 | Ryan | test
+2020-04-23 20:39:52 | Ryan | test
+2020-04-23 20:40:57 | Ryan | $purge 5
+2020-04-23 20:41:02 | Ryan | oh yeah
+2020-04-23 20:41:04 | Ryan | test
+2020-04-23 20:42:46 | Ryan | test
+2020-04-23 20:43:12 | Ryan | £reload server
+2020-04-23 20:43:17 | Matthew | wow
+2020-04-23 20:43:20 | Matthew | noice
+2020-04-23 20:43:21 | Ryan | hmm
+2020-04-23 20:43:25 | Ryan | $reload sevrer
+2020-04-23 20:43:27 | Matthew | remember to frequently commit and fetch
+2020-04-23 20:43:28 | Ryan | $reload servere
+2020-04-23 20:43:31 | Ryan | $reload server
+2020-04-23 20:43:46 | Ryan | test
+2020-04-23 20:43:53 | Ryan | wtf
+2020-04-23 20:44:19 | Ryan | test
+2020-04-23 20:44:37 | Ryan | ```py
+@commands.Cog.listener()
+    async def on_reaction_add(self, reaction, user):
+        client = self.client
+        emoji = reaction.emoji
+        guild = client.get_guild(reaction.message.guild.id)
+        if reaction.message.channel.id == 702934067561234542:
+            if emoji.name == "red_circle":
+                role = guild.get_role(emoji.id)
+                await user.add_role(role)
+```
+2020-04-23 20:44:41 | Ryan | why doest this work
+2020-04-23 20:45:13 | Matthew | oh
+2020-04-23 20:45:18 | Matthew | is it reactions?
+2020-04-23 20:45:22 | Ryan | yeah
+2020-04-23 20:45:28 | Matthew | ok
+2020-04-23 20:45:29 | Matthew | hmm
+2020-04-23 20:45:39 | Ryan | test
+2020-04-23 20:46:11 | Ryan | also its meant to be ```role = guild.get_role(702583030031581274)```
+2020-04-23 20:46:49 | Ryan | test
+2020-04-23 20:50:14 | Ryan | test
+2020-04-23 20:50:46 | Ryan | test
+2020-04-23 20:51:28 | Ryan | test
+2020-04-23 20:57:52 | Ryan | test
+2020-04-23 20:58:57 | Ryan | test
+2020-04-23 20:59:39 | Ryan | test
+2020-04-23 21:00:19 | Ryan | test
+2020-04-23 21:00:51 | Ryan | test
+2020-04-23 21:01:48 | Ryan | $purge 10
+2020-04-23 21:02:15 | Ryan | test
+2020-04-23 21:02:34 | Matthew | tst
+2020-04-23 21:04:36 | Ada | <:pink_circle:702935881123627039> HELLO
+2020-04-23 21:05:06 | Ryan | tyest
+2020-04-23 21:06:29 | Ryan | test
+2020-04-23 21:11:11 | Matthew | ```python
+role = guild.get_role(role_ids[emoji])
+```
+2020-04-23 21:11:16 | Matthew | <@!311770103463280641>
+2020-04-23 21:14:40 | Ryan | test
+2020-04-23 21:15:33 | Ryan | test
+2020-04-23 21:15:52 | Ryan | £reload server
+2020-04-23 21:16:03 | Ryan | test
+2020-04-23 21:17:15 | Ryan | test
+2020-04-23 21:23:25 | Ryan | test
+2020-04-23 21:24:23 | Ryan | test#
+2020-04-23 21:24:57 | Ryan | test
+2020-04-23 21:25:54 | Ryan | test
+2020-04-23 21:27:19 | Ryan | test
+2020-04-23 21:27:50 | Ryan | test
+2020-04-23 21:29:35 | Ryan | test
+2020-04-23 21:32:35 | Ryan | test
+2020-04-23 21:33:21 | Ryan | test
+2020-04-23 21:35:50 | Ryan | $purge 15
+2020-04-23 21:37:15 | Ryan | test
+2020-04-23 21:52:16 | Ryan | test
+2020-04-23 21:55:09 | Ryan | test
+2020-04-24 09:40:05 | Ryan | £reload server
+2020-04-24 09:43:46 | Darkhonix | Bruh
+2020-04-24 09:45:22 | Ryan | ?
+2020-04-24 09:48:39 | Ryan | £ping
+2020-04-24 09:48:41 | Ryan | hm
+2020-04-24 10:03:28 | Ryan | test
+2020-04-24 10:14:31 | Ada | they sent thosands of gifs
+2020-04-24 10:14:38 | Ada | one after the other
+2020-04-24 10:19:18 | Ryan | prehaps
+2020-04-24 10:19:39 | Ryan | test
+2020-04-24 10:20:44 | Ryan | test
+2020-04-24 10:21:02 | Ryan | test
+2020-04-24 10:21:04 | Ryan | nice
+2020-04-24 10:21:07 | Ryan | h
+2020-04-24 10:21:07 | Ryan | h
+2020-04-24 10:21:08 | Ryan | h
+2020-04-24 10:21:30 | Ryan | t
+2020-04-24 10:22:50 | Ryan | t
+2020-04-24 10:23:36 | Ryan | t
+2020-04-24 10:23:53 | Ryan | t
+2020-04-24 10:31:24 | Ryan | t
+2020-04-24 10:36:50 | Ryan | t
+2020-04-24 10:37:35 | Ryan | t
+2020-04-24 10:41:35 | Ryan | @everyone try role menu in <#702934067561234542>
+2020-04-24 10:41:59 | Ada | works
+2020-04-24 10:42:02 | Ryan | yes indeed
+2020-04-24 10:42:25 | Ryan | might add limit to how many you can have at once but thats after other stuff
+2020-04-24 11:05:44 | Ryan | <#702934067561234542>
+2020-04-24 11:05:52 | sikki | there we go
+2020-04-24 11:06:04 | Ryan | £ping
+2020-04-24 11:06:09 | Ryan | idkl why its not working
+2020-04-24 11:06:16 | Ryan | £purge 1
+2020-04-24 11:06:19 | Ryan | hmm
+2020-04-24 11:06:35 | Ryan | £status ziggy bad
+2020-04-24 11:06:53 | Ryan | £help
+2020-04-24 11:06:56 | Ryan | $help
+2020-04-24 11:06:57 | [$] MelonBot | 
+2020-04-24 11:07:22 | Ryan | %status hello
+2020-04-24 11:07:25 | Ryan | now it works
+2020-04-24 11:07:28 | Ryan | %ping
+2020-04-24 11:07:32 | Ryan | ok
+2020-04-24 11:07:38 | sikki | ryan i got a 50 ws on my alt
+2020-04-24 11:07:45 | Ziggy | drip
+2020-04-24 11:07:46 | Ryan | hacks
+2020-04-24 11:07:50 | Ziggy | ofc
+2020-04-24 11:07:57 | Ziggy | 20 block reach
+2020-04-24 11:08:12 | Ryan | yep
+2020-04-24 11:08:52 | Ziggy | HELL
+2020-04-24 11:08:55 | Ziggy | O
+2020-04-24 11:08:58 | Ryan | OWO
+2020-04-24 11:08:58 | [>] owo | What's This?
+2020-04-24 11:09:02 | Ziggy | OWO
+2020-04-24 11:09:03 | [>] owo | What's This?
+2020-04-24 11:09:05 | Ziggy | ovo
+2020-04-24 11:09:08 | Ryan | UWO
+2020-04-24 11:09:30 | Ryan | https://img.melonis.xyz/6dHZH2.png h,mm yes
+2020-04-24 11:09:40 | Ryan | poor ziggy wont understand
+2020-04-24 11:11:36 | Ziggy | innit

@@ -5,7 +5,7 @@ import datetime
 from discord.ext import commands
 
 cwd = os.path.dirname(__file__)
-jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")
+jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config2.json")
 config = json.loads(open(jsonPath, "r").read())
 
 
@@ -25,7 +25,7 @@ class Info_commands(commands.Cog):
             embed = discord.Embed()
             utils.get_member(ctx, member)
             utils.create_embed(ctx, embed, member)
-            embed.title = "MelonBot Help"
+            embed.title = "CSSbot Help"
             for command in self.client.commands:
                 if command.help is None:
                     pass
@@ -40,7 +40,7 @@ class Info_commands(commands.Cog):
                     utils.get_member(ctx, member)
                     utils.create_embed(ctx, embed, member)
 
-                    embed.title = "MelonBot Help"
+                    embed.title = "CSSbot Help"
                     embed.add_field(name = command.usage, value = command.description, inline = False)
                     embed.set_author(name = "")
 

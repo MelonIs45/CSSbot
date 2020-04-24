@@ -7,7 +7,7 @@ from discord.ext import commands, tasks
 
 
 cwd = os.path.dirname(__file__)
-jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")
+jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config2.json")
 config = json.loads(open(jsonPath, "r").read())
 
 
