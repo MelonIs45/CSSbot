@@ -44,9 +44,7 @@ class Info_commands(commands.Cog):
                     embed.add_field(name = command.usage, value = command.description, inline = False)
                     embed.set_author(name = "")
 
-                    await ctx.channel.send(embed = embed) 
-                else:
-                    await ctx.send("Unable to find command!")       
+                    await ctx.channel.send(embed = embed)   
 
 
     @commands.command(help = "**`$ping`**",
