@@ -48,6 +48,7 @@ class Info_commands(commands.Cog):
                 else:
                     ctx.send("Unable to find command!")       
 
+
     @commands.command(help = "**`$ping`**",
     brief = "Returns ping in ms.",
     usage = "**Usage: `$ping`**",

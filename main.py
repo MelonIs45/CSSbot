@@ -6,6 +6,7 @@ import aiohttp
 import subprocess
 from discord.ext import commands, tasks
 
+
 cwd = os.path.dirname(os.path.realpath(__file__))
 config = json.loads(open(cwd + "/config.json", "r").read())
 client = commands.Bot(command_prefix = config["data"]["prefix"],  help_command=None)

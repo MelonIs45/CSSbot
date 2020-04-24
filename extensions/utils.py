@@ -4,11 +4,10 @@ import json
 import datetime
 from discord.ext import commands
 
+
 cwd = os.path.dirname(__file__)
 jsonPath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config.json")
 config = json.loads(open(jsonPath, "r").read())
-rgb_scale = 255
-cmyk_scale = 100
 
 
 class Utils(commands.Cog):
