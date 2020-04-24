@@ -103,7 +103,7 @@ class Info_commands(commands.Cog):
             await ctx.channel.purge(limit = 2)
 
     @commands.command()
-    #@commands.has_permissions(manage_roles = True)
+    @commands.has_permissions(manage_roles = True)
     async def verify(self, ctx, name, school, id):
         guild = self.client.get_guild(ctx.guild.id)
         utils = self.client.get_cog("Utils")
