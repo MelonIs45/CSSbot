@@ -46,7 +46,7 @@ class Info_commands(commands.Cog):
 
                     await ctx.channel.send(embed = embed) 
                 else:
-                    ctx.send("Unable to find command!")       
+                    await ctx.send("Unable to find command!")       
 
 
     @commands.command(help = "**`$ping`**",

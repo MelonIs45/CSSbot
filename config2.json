@@ -9,5 +9,10 @@
   "roleMenu": {
     "roleChannel": "702934067561234542",
     "roleMessage": "703177918959845398"
+  },
+  "verify": {
+    "requestChannel": "703319582659706971",
+    "verifyChannel": "703319947870208120",
+    "nameChannel": "703320442320191609"
   }
 }

@@ -2,6 +2,10 @@ import discord
 import os
 import json
 import datetime
+import asyncio
+import time
+import traceback
+import sys
 from discord.ext import commands
 
 
@@ -81,6 +85,64 @@ class Info_commands(commands.Cog):
                     if emoji.name == emote:
                         role = role = guild.get_role(int(roleDict[emote]))
                         await member.remove_roles(role)
+
+
+    @commands.command()
+    async def request(self, ctx, name, school):
+        client = self.client
+        if ctx.channel.id == int(config["verify"]["requestChannel"]) and len(ctx.message.content.split(" ")) == 3:
+            guild = client.get_guild(ctx.guild.id)
+            verifyChannel = guild.get_channel(int(config["verify"]["verifyChannel"]))
+            await verifyChannel.send(f"Name: {name}, School: {school}, User ID: {ctx.author.id}")
+            await ctx.send("Request Sent!")
+            await asyncio.sleep(3)
+            await ctx.channel.purge(limit = 2)
+        else:
+            await ctx.send("Please use the format: `%request <name> <school>`")
+            await asyncio.sleep(5)
+            await ctx.channel.purge(limit = 2)
+
+    @commands.command()
+    #@commands.has_permissions(manage_roles = True)
+    async def verify(self, ctx, name, school, id):
+        guild = self.client.get_guild(ctx.guild.id)
+        utils = self.client.get_cog("Utils")
+        if ctx.channel.id == int(config["verify"]["verifyChannel"]):
+            member = guild.get_member(int(id))
+            role = guild.get_role(703319133973905428)
+            await member.remove_roles(role)
+            await ctx.send(f"Added {member} to the name list!")
+            nameChannel = guild.get_channel(int(config["verify"]["nameChannel"]))
+            verifyChannel = guild.get_channel(int(config["verify"]["verifyChannel"]))
+            member = None
+            utils.get_member(ctx, member)
+            embed = discord.Embed()
+            timeNow = (datetime.datetime.now()).strftime("%A %d %B %Y at %X%p")
+
+            embed.add_field(name = "Name:", value = name, inline = True)
+            embed.add_field(name = "Tag:", value = f"<@{id}>", inline = True)
+            embed.add_field(name = "School:", value = school, inline = False)
+            embed.set_footer(text = f"Verified at: {timeNow}")
+            
+            await nameChannel.send(embed = embed)
+
+
+
+    # @commands.Cog.listener()
+    # async def on_command_error(self, ctx, error):
+    #     if isinstance(error, commands.UnexpectedQuoteError):
+    #         await ctx.send("Please remove any quotation marks from command.")
+    #         await asyncio.sleep(3)
+    #         await ctx.channel.purge(limit = 2)
+    #     elif isinstance(error, commands.MissingPermissions):
+    #         await ctx.send("Missing permissions.")
+    #     elif isinstance(error, commands.NotOwner):
+    #         await ctx.send("You aren't the bot owner :D")
+    #     else:
+    #         exc_info = sys.exc_info()
+    #         traceback.print_exception(*exc_info)
+    #         del exc_info
+
 
 
 def setup(client):
